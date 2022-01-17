@@ -79,11 +79,15 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yingte He">
-<meta property="og:url" content="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.html">
+<meta name="description" content="需求： 某个局域网内有一台服务器A（Linux），此时需要在另一个局域网内通过ssh访问服务器A。 准备： 需要一台有公网ip的云服务器作为媒介，通过访问该云服务器的某个端口，转到服务器A的22端口，该过程通过FRP工具实现，目的主机安装FRP客户端，云服务器安装FRP服务端。 步骤： 从https:&#x2F;&#x2F;github.com&#x2F;fatedier&#x2F;frp&#x2F;releases下载FRP对应版本 上传至云服">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FRP内网穿透配置">
+<meta property="og:url" content="http://example.com/2022/01/16/FRP/index.html">
 <meta property="og:site_name" content="Yingte He">
+<meta property="og:description" content="需求： 某个局域网内有一台服务器A（Linux），此时需要在另一个局域网内通过ssh访问服务器A。 准备： 需要一台有公网ip的云服务器作为媒介，通过访问该云服务器的某个端口，转到服务器A的22端口，该过程通过FRP工具实现，目的主机安装FRP客户端，云服务器安装FRP服务端。 步骤： 从https:&#x2F;&#x2F;github.com&#x2F;fatedier&#x2F;frp&#x2F;releases下载FRP对应版本 上传至云服">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-01-16T06:22:35.000Z">
+<meta property="article:modified_time" content="2022-01-17T02:06:15.807Z">
 <meta property="article:author" content="Yingte He">
 <meta name="twitter:card" content="summary">
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/categories/计算机基础/"/>
+  <link rel="canonical" href="http://example.com/2022/01/16/FRP/"/>
 
 
 
 
 
-  <title>分类: 计算机基础 | Yingte He</title>
+  <title>FRP内网穿透配置 | Yingte He</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,55 +228,186 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>计算机基础<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/16/FRP/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yingte He">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2022/01/03/how-program-run/" itemprop="url">
-              
-                <span itemprop="name">程序是如何跑起来的</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">FRP内网穿透配置</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2022-01-03T12:48:01+08:00"
-              content="2022-01-03" >
-          01-03
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-01-16T14:22:35+08:00">
+                2022-01-16
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>需求：</strong></p>
+<p>某个局域网内有一台服务器A（Linux），此时需要在另一个局域网内通过ssh访问服务器A。</p>
+<p><strong>准备：</strong></p>
+<p>需要一台有公网ip的云服务器作为媒介，通过访问该云服务器的某个端口，转到服务器A的22端口，该过程通过FRP工具实现，目的主机安装FRP客户端，云服务器安装FRP服务端。</p>
+<p><strong>步骤：</strong></p>
+<p>从<code>https://github.com/fatedier/frp/releases</code>下载FRP对应版本</p>
+<p>上传至云服务器并解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf frp_0.38.0_linux_amd64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>目录下frps代表服务端相关，frpc代表客户端相关</p>
+<p>配置服务端配置文件<strong>frps.ini</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7001    #该端口为服务端开放端口，用于与客户端通信</span><br><span class="line">bind_addr = 0.0.0.0</span><br></pre></td></tr></table></figure>
+
+<p>启动frp服务端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./frps -c frps.ini </span><br><span class="line"># 后台启动如下</span><br><span class="line">nohup ./frps -c frps.ini &gt; nohup.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+
+<p>之后进行客户端配置，即目标服务器的配置。同样将该压缩包解压，并配置<strong>frpc.ini</strong>文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr = x.x.x.x #此处为云服务器的公网ip地址</span><br><span class="line">server_port = 7001 #客户端与服务端7001端口通信</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 22</span><br><span class="line">remote_port = 7002   #访问云服务器的7002端口会转到目标服务器的22端口</span><br></pre></td></tr></table></figure>
+
+<p>启动frp客户端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./frpc -c frpc.ini </span><br><span class="line"># 后台启动如下</span><br><span class="line">nohup ./frpc -c frpc.ini &gt; nohup.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+
+<p>之后通过ssh访问x.x.x.x的7002端口就会等同于访问目的主机的22端口!</p>
+<p><em>注意，云服务器需要在控制台配置防火墙开放7001和7002端口！</em></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/12/15/git-tutorial/" rel="next" title="git基础教程">
+                <i class="fa fa-chevron-left"></i> git基础教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -280,6 +415,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -502,6 +641,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
